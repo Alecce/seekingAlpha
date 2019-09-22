@@ -21,15 +21,12 @@ router.get('/', function(req, res, next) {
         "    seeking_alpha_db.groups.name AS group_name,\n" +
         "    if(!ifnull(id_follow, 0), 0, count(*)) as follower_number,\n" +
         "    if(id_follower = " + user_id + ", 1, 0) as my_follow\n" +
-        "    \n" +
         "FROM\n" +
         "    ((users\n" +
         "    INNER JOIN seeking_alpha_db.groups ON users.id_group = seeking_alpha_db.groups.id)\n" +
         "    left JOIN followers ON users.id = followers.id_follow)\n" +
         "\tGROUP BY users.id\n" +
-        "\n" +
-        "\n" +
-        "ORDER BY users.id;"
+        "ORDER BY users.name;"
     connection.query(query, function (error, results, fields) {
         if (error) {
             res.status(500).send('');
