@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--Login block-->
+<div class="card collapse show" blockName="login">
+    <div class="card-body" >
+        <div class="text-center">
+            Do you want to log in as user with id=1?
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" buttonAction="login">Log in</button>
+        </div>
+    </div>
+</div>
+
+<!--Logout block-->
+<div class="card collapse"  blockName="logout">
+    <div class="card-body">
+        <div class="text-center">
+            Do you want to log out?
+        </div>
+        <div class="text-center">
+            <button class="btn btn-danger" buttonAction="logout">Log out</button>
+        </div>
+    </div>
+</div>
+
+<!--List of users-->
+<div class="card collapse"  blockName="followList">
+    <div class="card-body">
+
+        <div blockName="greetings"></div>
+        <div class="mb-2">Choose user to follow:</div>
+        <div blockName="followers">
+            <div class="row" blockName="tableRow">
+                <div class="col" blockName="user">
+                    User
+                </div>
+                <div class="col" blockName="group">
+                    Group
+                </div>
+                <div class="col" blockName="follower_number">
+                    Followers number
+                </div>
+                <div class="col" blockName="action">
+                    Action
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="javascripts/page.js"></script>
+<script src="javascripts/buttons.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>
