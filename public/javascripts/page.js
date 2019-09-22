@@ -14,9 +14,13 @@
                 $("[blockName='logout']").addClass('show');
                 $("[blockName='login']").removeClass('show');
 
-                $.get( "users", function( output, status, xhr ) {
-                    fulfillUsers(output);
-                });
+                $.get( "users")
+                    .done(function( output, status, xhr ) {
+                        fulfillUsers(output);
+                    })
+                    .fail(function() {
+                        alert("Failed to download users information");
+                    });
             } else {
                 $("[blockName='login']").addClass('show');
                 $("[blockName='followList']").removeClass('show');
